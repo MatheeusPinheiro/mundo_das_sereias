@@ -36,6 +36,7 @@ body,html{
     position: absolute;
     right: 30px;
     top: 2rem;
+    box-shadow: 0 0 5px #000;
 }
 
 .trilho .indicador{
@@ -103,12 +104,15 @@ body.dark{
     font-family: "Rammetto One", sans-serif;
     font-weight: 400;
     font-style: normal;
+    text-shadow: 0 0 10px #117c03;
 }
 
 .container .logo a img{
     width: 120px;
     height: 120px;
     border-radius: 50%;
+    opacity: 0; /* Inicia com a imagem invisível */
+    animation: fadeIn 5s ease-in-out forwards; 
 }
 
 .container .logo a img:hover{
@@ -138,6 +142,7 @@ body.dark{
     color: #191919;
     text-align: left;
     text-transform: uppercase;
+    box-shadow: 0 0 10px #191919;
 }
 
 
@@ -157,5 +162,50 @@ body.dark{
         text-align: center;
         padding-left: 0;
     }
- 
+
+    .container .links .link{
+        position: relative;
+        right: -100%;
+        animation: slideInRight 2s ease forwards; /* Aplica a animação slideInRight com duração de 2 segundos */
+
+    }
+
+    .container .logo a{
+        position:relative;
+        left: -100%;
+        animation: slideInLeft 2s ease forwards; /* Aplica a animação slideInRight com duração de 2 segundos */
+    }
+        
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* Começa completamente invisível */
+    }
+    to {
+        opacity: 1; /* Termina completamente visível */
+    }
+}
+
+
+
+@keyframes slideInRight {
+    from {
+        right: -100%; /* Começa fora da tela na direita */
+    }
+    to {
+        right: 0%; /* Termina a 50% do container, ajuste conforme necessário */
+    }
+}
+
+
+
+@keyframes slideInLeft {
+    from {
+        left: -100%; /* Começa fora da tela na direita */
+    }
+    to {
+        left: 0%; /* Termina a 50% do container, ajuste conforme necessário */
+    }
 }
