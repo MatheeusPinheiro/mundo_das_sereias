@@ -59,7 +59,7 @@ body,html{
 }
 
 body.dark{
-    background: linear-gradient(to right, rgb(0, 0, 0, 0.7), rgba(56, 138, 245, 0.904));
+    background: linear-gradient(to bottom, rgb(255,255,255), rgba(56, 138, 245, 0.904));
     color: #191919;
 }
 
